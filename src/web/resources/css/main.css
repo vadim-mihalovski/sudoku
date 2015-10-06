@@ -4,13 +4,11 @@ body {
     background: url('../images/canvas-bg.jpg') 0 0;
 }
 
-@media all {
-    .outer_wrap {
-        text-align: center;
-        padding: 10px 0 15px;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-    }
+.outer_wrap {
+    text-align: center;
+    padding: 10px 0 15px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 
 .cont_wrap {
@@ -29,38 +27,58 @@ body {
     position: relative;
 }
 
-@media all {
-    .cont_wrap > table {
-        width: 100%;
-        height: 100%;
-        border: #AAA solid 2px;
-        color: #777;
-        border-radius: 6px;
-        background: url('../images/canvas-bg.jpg') 0 0;
-    }
+.cont_wrap > table {
+    width: 100%;
+    height: 100%;
+    background: url('../images/canvas-bg.jpg') 0 0;
 }
 
 .box {
     width: 100%;
     height: 100%;
+    font-size: 3em;
+    cursor: default;
+    transition: 0.2s;
+    text-align: center;
+    color: #9A9595;
+    border-spacing: 0;
 }
 
-.box > * > tr:first-child td {
-    border-width: 0 2px 0 0;
+.dark_box {
+
+}
+
+.solid_borders {
+    border: #AAA solid 2px;
+    color: #777;
+    border-radius: 6px;
+    border-spacing: 0;
+}
+
+.solid_borders > * > * > td {
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #AAA;
+}
+
+.solid_borders > * > tr:first-child > td {
+    border-top: 0;
+}
+
+.solid_borders > * > tr td:last-child {
+    border-right-width: 0;
 }
 
 .box > * > * > td {
-    width: 33%;
-    height: 33%;
-    font-size: 3em;
-    border-color: #CCC;
-    border-style: dashed;
     border-width: 2px 2px 0 0;
-    cursor: default;
-    transition: 0.2s;
+    border-style: dashed;
+    border-color: #CCC;
+}
+
+.box > * > tr:first-child td {
+    border-top-width: 0;
 }
 
 .box .user {
     color: #A83E3E;
-    cursor: pointer;
 }
